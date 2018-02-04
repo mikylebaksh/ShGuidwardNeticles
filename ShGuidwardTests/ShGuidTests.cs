@@ -169,7 +169,6 @@ namespace ShGuidwardTests
         [TestMethod]
         public void ShGuid_Decode_CheckShGuidDefaultSettings()
         {
-            // todo finish this and write a test for a negative decode
             // Arrange
             var expectedShortGuid = "1cJYAG2AXEaFYDE9tsBUwA";
             var stringifiedGuid = "0058c2d5-806d-465c-8560-313db6c054c0";
@@ -183,24 +182,6 @@ namespace ShGuidwardTests
             Assert.AreEqual<Guid>(expectedGuid, actualShGuid.Guid);
             Assert.AreEqual(expectedShortGuid, actualShGuid.ShortGuid);
             Assert.AreEqual(expectedLength, actualShGuid.ShortGuid.Length);
-        }
-
-        [TestMethod]
-        public void ShGuid_Decode_CheckInitializedGuidAndReplaceSettings()
-        {
-            // Arrange
-            var expectedShortGuid = "bdWuzRKHTUGzRgGQXQAm_g";
-            var stringifiedGuid = "cdaed56d-8712-414d-b346-01905d0026fe";
-            var expectedGuid = new Guid(stringifiedGuid);
-            var expectedLength = 22;
-
-            // Act
-            var shGuid = new ShGuid(expectedGuid);
-
-            // Assert
-            Assert.AreEqual<Guid>(expectedGuid, shGuid.Guid);
-            Assert.AreEqual(expectedShortGuid, shGuid.ShortGuid);
-            Assert.AreEqual(expectedLength, shGuid.ShortGuid.Length);
         }
 
         [TestMethod]

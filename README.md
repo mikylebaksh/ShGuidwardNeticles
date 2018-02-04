@@ -45,10 +45,15 @@ if(ShGuid.TryParse(stringifiedGuid, out shGuid))
 }
 ```
 
-### Decode and TryDecode
+### Decode
 
 ```c#
+var shortGuid = "1cJYAG2AXEaFYDE9tsBUwA";
 
+var shGuid = ShGuid.Decode(shortGuid);
+
+Console.WriteLine(shGuid.Guid); // output: 0058c2d5-806d-465c-8560-313db6c054c0
+Console.WriteLine(shGuid.ShortGuid); // output: 1cJYAG2AXEaFYDE9tsBUwA
 ```
 
 ## A Note
