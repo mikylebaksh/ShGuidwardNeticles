@@ -40,12 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IIdentifier.cs" />
-    <Compile Include="Refernce.cs" />
     <Compile Include="ShGuid.cs" />
     <Compile Include="ShGuidSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShId.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

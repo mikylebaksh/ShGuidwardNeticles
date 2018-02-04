@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ShGuidwardNeticles
+﻿namespace ShGuidwardNeticles
 {
     public class ShGuidSettings
     {
@@ -50,7 +44,7 @@ namespace ShGuidwardNeticles
 
         public ShGuidSettings(char replaceSlashWith, char replacePlusWith, bool trim)
         {
-            _replacePlusWith = replaceSlashWith;
+            _replaceSlashWith = replaceSlashWith;
             _replacePlusWith = replacePlusWith;
             _trim = trim;
         }

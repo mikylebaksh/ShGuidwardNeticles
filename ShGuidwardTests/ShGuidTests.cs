@@ -252,37 +252,5 @@ namespace ShGuidwardTests
             Assert.IsFalse(actualResult);
         }
         #endregion
-
-        [TestMethod]
-        public void TestingCode()
-        {
-            var random = new Random();
-            var origNumber = random.Next();
-            var number = origNumber;
-            var alphabet = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
-            String sConverted = string.Empty;
-            Int32 iAlphabetLength = alphabet.Length;
-
-            while (number > 0)
-            {
-                long lNumberRemainder = (number % iAlphabetLength);
-                number = Convert.ToInt32(number / iAlphabetLength);
-                sConverted = alphabet[Convert.ToInt32(lNumberRemainder)] + sConverted;
-            }
-
-            var lConverted = 0;
-            var lTemporaryNumberConverter = 1;
-
-
-            while (sConverted.Length > 0)
-            {
-                String sCurrentCharacter = sConverted.Substring(sConverted.Length - 1);
-                lConverted = lConverted + (lTemporaryNumberConverter * alphabet.IndexOf(sCurrentCharacter));
-                lTemporaryNumberConverter = lTemporaryNumberConverter * alphabet.Length;
-                sConverted = sConverted.Substring(0, sConverted.Length - 1);
-            }
-
-        }
-
     }
 }

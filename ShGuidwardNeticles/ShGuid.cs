@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ShGuidwardNeticles
 {
     /// <summary>
-    /// Immutable Guid and it's base64 encoded counterpart
+    /// Guid and it's base64 encoded counterpart
     /// </summary>
     /// <remarks>
-    /// http://www.singular.co.nz/2007/12/shortguid-a-shorter-and-url-friendly-guid-in-c-sharp/
+    /// Based off of: http://www.singular.co.nz/2007/12/shortguid-a-shorter-and-url-friendly-guid-in-c-sharp/
     /// </remarks>
     public class ShGuid
     {
